@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('CreateAccount', () =>{
+    cy.get('.text-right > .HeaderMenu-link').click()
+    //Click on Create Account
+    cy.get('.mt-1 > a').click()
+    cy.get('#email-container > .mb-1 > .text-mono').contains('Enter your email')
+})
